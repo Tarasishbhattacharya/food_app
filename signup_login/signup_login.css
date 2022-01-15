@@ -1,0 +1,85 @@
+body{
+background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+background-position: cover;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#login{
+    text-decoration: none;
+    margin-left: 590px;
+    color: orange;
+}
+ #signup_form{
+     margin-top: 30px;
+     text-align: center;
+     /* border: 1px solid orange; */
+     width: 30%;
+     margin: auto;
+     padding-top: 15px;
+     margin-top: 15px;
+     border-radius: 50px;
+     background: rgba( 255, 255, 255, 0.15 );
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     backdrop-filter: blur( 1.5px );
+     -webkit-backdrop-filter: blur( 1.5px );
+     border-radius: 30px;
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#login_form{
+    margin-top: 30px;
+     text-align: center;
+     /* border: 1px solid orange; */
+     width: 30%;
+     margin: auto;
+     padding-top: 15px;
+     margin-top: 15px;
+     border-radius: 50px;
+     background: rgba( 255, 255, 255, 0.15 );
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     backdrop-filter: blur( 1.5px );
+     -webkit-backdrop-filter: blur( 1.5px );
+     border-radius: 30px;
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#home_page{
+    text-decoration: none;
+    margin-left: 610px;
+    color: green;
+}
+#login_btn{
+    width: 23%;
+    padding: 5px 15px;
+    color: white;
+    background-color: green;
+    border: transparent;
+    outline: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+span{
+    line-height: 15px;
+}
+h2{
+    text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+#submit_btn{
+    width: 23%;
+    padding: 5px 15px;
+    color: white;
+    background-color: orange;
+    border: transparent;
+    outline: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+input{
+    border-color: orange;
+    /* border: transparent; */
+    outline: none;
+}

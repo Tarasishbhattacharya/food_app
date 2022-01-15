@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href='./signup_login/signup_login.css'>
+</head>
+<body>
+   <h2>LogIn</h2>
+   <a href="food .html" id="home_page">Go to home page</a>
+   <form onsubmit="login(event)" id="login_form">
+    <input type="text"  id="username"><br><br>
+    <input type="password" id="password"><br><br>
+    <input type="submit" value="logIn" id="login_btn"><br><br>
+</form>
+</body>
+</html>
+<script>
+ async function login(e){
+     e.preventDefault();
+     let login_data={
+         username:document.querySelector("#username").value,
+         password:document.querySelector("#password").value,
+     }
+     login_data=JSON.stringify(login_data);
+     let response= await fetch(" https://masai-api-mocker.herokuapp.com/auth/login",{
+         method:'POST',
+         body:login_data,
+         headers:{
+             'Content-Type':'application/json',
+         }
+     })
+     let data =await response.json();
+    console.log(data)
+    let username=document.querySelector("#username").value;
+    if(!data.error){
+        alert("Login succesful");
+    }else{
+        alert('invalid credential');
+    }
+    getdetail(username,data.token);
+ }
+ async function getdetail(username,token){
+     let response=await fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
+         headers:{
+             'Content-Type':'application/json',
+             Authorization:`Bearer ${token}`,
+         }
+     })
+     let data=await response.json();
+     console.log(data);
+     let name={
+         name:data.name,
+     }
+     localStorage.setItem("user_name",JSON.stringify(name));
+ }
+</script>

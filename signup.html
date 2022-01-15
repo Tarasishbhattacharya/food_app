@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href='./signup_login/signup_login.css'>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <a href="LogIn.html" id="login">
+        <span class="login_page">Or login to your account</span>
+    </a>
+    <form onsubmit="signup(event)" id="signup_form">
+        <input type="text"  id="name" placeholder="Your name"><br><br>
+        <input type="email"  id="email" placeholder="Your email"><br><br>
+        <input type="password"  id="password" placeholder="Your password"><br><br>
+        <input type="text" name="" id="username" placeholder="Your username"><br><br>
+        <input type="number"  id="mobile" placeholder="Your contact No"><br><br>
+        <input type="text"  id="description" placeholder="Your purpose"><br><br>
+        <input type="submit" value="Continue" id="submit_btn">
+    </form>
+</body>
+</html>
+<script>
+ async function signup(e){
+     e.preventDefault();
+     let signUp_data={
+         name:document.querySelector("#name").value,
+         email:document.querySelector("#email").value,
+         password:document.querySelector("#password").value,
+         username:document.querySelector("#username").value,
+         mobile :document.querySelector("#mobile").value,
+         description:document.querySelector("#description").value,
+     }
+     signUp_data=JSON.stringify(signUp_data);
+     let response=await fetch(" https://masai-api-mocker.herokuapp.com/auth/register",{
+         method:'POST',
+         body:signUp_data,
+         headers:{
+             'Content-Type':"application/json",
+         }
+     })
+     let data= await response.json();
+     console.log(data);
+ }
+//   {
+//   "name": "MASAI School",
+//   "email": "hello@masai.com"
+//   "password": "secret",
+//   "username": "masai-school",
+//   "mobile": "9876543210",
+//   "description": "A Transformation in education!" 
+// }
+</script>

@@ -1,0 +1,97 @@
+h3{
+    display: flex;
+    flex: 1;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    align-items: center;
+    background-color: springgreen;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.search i{
+    display: inline-block;
+    border: transparent;
+    color: blanchedalmond;
+    background-color: black;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+input[type="text"]{
+   width: 280px;
+   height: 25px;
+}
+#items{
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+}
+#items a{
+    text-decoration: none;
+    border: transparent;
+    color: rgba(77, 97, 156, 0.623);
+    background-color: silver;
+    padding: 10px;
+    border-radius: 10px;
+}
+#data{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+#data>div{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 30px;
+}
+#data>div>img{
+    width: 100%;
+    border-radius: 20px;
+}
+#data>div>p{
+    padding-left: 5px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#data>div>button{
+    margin-left:170px;
+    margin-bottom: 5px;
+    background-color: green;
+    border: transparent;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: wheat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#info{
+    width: 25%;
+    height: 150px;
+    overflow: scroll;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+span{ 
+   margin-top:10px;
+   font-weight: bold;
+   color: blue;
+}
+/* #login span{
+    text-decoration: none;
+} */
+
