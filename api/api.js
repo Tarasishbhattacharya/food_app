@@ -1,10 +1,4 @@
 
-import {cart,count} from './food.html'
-totalcart(cart,count)
-function totalcart(cart,count){
-    count.textContent="Totalcart "+cart.length;
-}
-
 
 
 
@@ -33,11 +27,6 @@ function append({meals},location){
        let price=document.createElement("p");
        price.textContent="price : "+random_price;
        let button=document.createElement("button");
-       button.addEventListener("click",()=>{
-           cart.push(el);
-           localStorage.setItem("food_cart",JSON.stringify(cart));
-           totalcart(cart,count);
-       })
        button.textContent="Add to Cart";
        div.append(img,title,price,button);
        location.append(div);

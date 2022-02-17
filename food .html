@@ -11,17 +11,14 @@
 </head>
 <body>
     <div id="container"></div> 
-    <h2 id="count"></h2> 
     <div id="data"></div> 
 </body>
 </html>
 <script type="module">
-    let cart=JSON.parse(localStorage.getItem("food_cart"))||[];
-    import {getdata,append,totalcart,add} from './api/api.js'
+    import {getdata,append} from './api/api.js'
     import nav from './component2/nav.js'
     let cont=document.querySelector("#container");
     cont.innerHTML=nav();
-    let count=document.querySelector("#count");
     let user_name=JSON.parse(localStorage.getItem("user_name"));
     let welcome=document.querySelector("#welcome_user");
     welcome.textContent="Welcome"+" "+ user_name.name;
@@ -35,5 +32,4 @@
         console.log(err);
     })
     })
-    export {cart,count};
 </script>
